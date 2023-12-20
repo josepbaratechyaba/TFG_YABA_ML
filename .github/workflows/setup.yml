@@ -20,7 +20,7 @@ jobs:
       - name: Install cookiecutter
         run: pip3 install cookiecutter
 
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         id: fetch-repo-and-user-details
         with:
           script: |
