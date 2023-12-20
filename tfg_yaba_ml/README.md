@@ -1,4 +1,4 @@
-# {{cookiecutter.hyphenated}}
+# tfg_yaba_ml
 
 ## How to run this project?
 
