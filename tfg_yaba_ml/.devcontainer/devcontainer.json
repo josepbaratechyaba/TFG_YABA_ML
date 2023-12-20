@@ -2,43 +2,61 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
 	"name": "tfg_yaba_ml",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {
-	// },
-
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			"settings": {},
-			"extensions": [
-				"streetsidesoftware.code-spell-checker"
-			]
-		}
+	"context": "..",
+	"dockerFile": "../Dockerfile",
+	"runArgs": [
+		"--env-file",
+		"${localWorkspaceFolder}/.env"
+	],
+	"settings": {
+		"editor.formatOnSave": true,
+		"editor.bracketPairColorization.enabled": true,
+		"editor.guides.bracketPairs": "active",
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true,
+		},
+		"files.eol": "\n",
+		"python.defaultInterpreterPath": "/usr/local/bin/python3",
+		"python.formatting.provider": "black",
+		"python.formatting.blackPath": "/usr/local/bin/black",
+		"python.sortImports.path": "/usr/local/bin/isort",
+		"python.testing.pytestArgs": [
+			"tests"
+		],
+		"python.testing.unittestEnabled": false,
+		"python.testing.pytestEnabled": true,
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/bin/bash",
+				"args": [
+					"-l"
+				]
+			}
+		},
+		"trailing-spaces.includeEmptyLines": false,
+		"trailing-spaces.trimOnSave": true,
+		"workbench.tree.indent": 16,
+		"workbench.iconTheme": "vscode-great-icons",
 	},
-	
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [9000],
-
-	// Use 'portsAttributes' to set default properties for specific forwarded ports. 
-	// More info: https://containers.dev/implementors/json_reference/#port-attributes
-	"portsAttributes": {
-		"9000": {
-			"label": "Hello Remote World",
-			"onAutoForward": "notify"
-		}
-	},
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pipenv install",
-	"features": {
-		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/devcontainers-contrib/features/pipenv:2": {}
-	}
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"extensions": [
+		"ms-python.python",
+		"github.vscode-pull-request-github",
+		"ms-vsliveshare.vsliveshare-pack",
+		"yzhang.markdown-all-in-one",
+		"emmanuelbeziat.vscode-great-icons",
+		"shardulm94.trailing-spaces",
+		"johnpapa.vscode-peacock",
+		"eamodio.gitlens",
+		"Gruntfuggly.todo-tree",
+		"bungcip.better-toml"
+	],
+	"forwardPorts": [
+		8080
+	],
+	"mounts": [
+		"source=github_cli,target=/home/docker/.config/gh,type=volume",
+		"source=gcloud,target=/home/docker/.config/gcloud,type=volume"
+	],
+	"remoteUser": "docker"
 }
