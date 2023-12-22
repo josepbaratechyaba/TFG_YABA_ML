@@ -38,4 +38,6 @@ USER $USER
 # Working directory
 WORKDIR $APP_DIR
 
-CMD bash
+RUN python -m ipykernel install --user --name ml_kernel --display-name "ml_kernel"
+
+CMD ["jupyter", "notebook", "--kernel=ml_kernel"]

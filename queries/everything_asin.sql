@@ -20,7 +20,7 @@ with data as (
     sum(daily_page_views_mobile_asin) as pageviews_mobile,
     sum(daily_page_views_browser_asin) as pageviews_browser,
     sum(daily_page_views_asin) as pageviews,
-  from {{ ref('fct_fe_final_report_everything_asin') }}
+  from `yaba-data.base.fct_fe_final_report_everything_asin`
   group by 1, 2, 3, 4, 5, 6
 ),
 

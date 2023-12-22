@@ -8,6 +8,8 @@ scikit-learn = "==1.3"
 pandas = "==2.1"
 pandas-gbq = "==0.20"
 jupyter = "*"
+ipykernel = "*"
+plotly = "*"
 
 [dev-packages]
 black = "==23.12"

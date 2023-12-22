@@ -51,7 +51,8 @@
 				"johnpapa.vscode-peacock",
 				"eamodio.gitlens",
 				"Gruntfuggly.todo-tree",
-				"bungcip.better-toml"
+				"bungcip.better-toml",
+				"ms-toolsai.jupyter"
 			]
 		}
 	},

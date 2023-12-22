@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b803f4dcb48ebb4ca2fdbd46828aef3c781d04c26d174c30fd843260a169b1a4"
+            "sha256": "981e9f2f3c66633f99163b286d3eaef75e9802d15f7eed03ff57ffcdf7f5ebeb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -579,7 +579,7 @@
                 "sha256:7d5d594b6690654b4d299edba5e872dc17bb7396a8d0609c97cb7b8a1c605de6",
                 "sha256:dab88b47f112f9f7df62236511023c9bdeef67abc73af7c652e4ce4441601686"
             ],
-            "markers": "python_version >= '3.8'",
+            "index": "pypi",
             "version": "==6.27.1"
         },
         "ipython": {
@@ -1017,6 +1017,14 @@
             "markers": "python_version >= '3.8'",
             "version": "==4.1.0"
         },
+        "plotly": {
+            "hashes": [
+                "sha256:23aa8ea2f4fb364a20d34ad38235524bd9d691bf5299e800bca608c31e8db8de",
+                "sha256:360a31e6fbb49d12b007036eb6929521343d6bee2236f8459915821baefa2cbb"
+            ],
+            "index": "pypi",
+            "version": "==5.18.0"
+        },
         "prometheus-client": {
             "hashes": [
                 "sha256:4585b0d1223148c27a225b10dbec5ae9bc4c81a99a3fa80774fa6209935324e1",
@@ -1038,7 +1046,7 @@
                 "sha256:89075171ef11988b3fa157f5dbd8b9cf09d65fffee97e29ce403cd8defba19d2",
                 "sha256:a829c79e619e1cf632de091013a4173deed13a55f326ef84f05af6f50ff4c82c"
             ],
-            "markers": "python_version >= '3.11'",
+            "markers": "python_version >= '3.6'",
             "version": "==1.23.0"
         },
         "protobuf": {
@@ -1625,6 +1633,14 @@
                 "sha256:d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695"
             ],
             "version": "==0.6.3"
+        },
+        "tenacity": {
+            "hashes": [
+                "sha256:5398ef0d78e63f40007c1fb4c0bff96e1911394d2fa8d194f77619c05ff6cc8a",
+                "sha256:ce510e327a630c9e1beaf17d42e6ffacc88185044ad85cf74c0a8887c6a0f88c"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==8.2.3"
         },
         "terminado": {
             "hashes": [
