@@ -10,6 +10,7 @@ pandas-gbq = "==0.20"
 jupyter = "*"
 ipykernel = "*"
 plotly = "*"
+matplotlib = "==3.4.3"
 
 [dev-packages]
 black = "==23.12"
