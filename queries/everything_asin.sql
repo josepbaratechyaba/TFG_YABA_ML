@@ -85,7 +85,7 @@ new_features as (
         top_bsr_position,
         bot_bsr_position,
         sales,
-        safe_divide(sales,avg(sales) over (partition by country_code, asin rows between 90 preceding and current row)) as perdormance,
+        safe_divide(sales,avg(sales) over (partition by country_code, asin rows between 90 preceding and current row)) as performance,
         units,
         discounts,
         cogs,
