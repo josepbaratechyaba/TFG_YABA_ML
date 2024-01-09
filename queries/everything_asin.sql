@@ -121,4 +121,4 @@ new_features as (
 
 select * except(rank)
 from new_features
-where rank < 10 and reporting_date > '2023-06-01'
+where reporting_date > '2023-11-09' --and rank < 10
